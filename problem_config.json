@@ -4,7 +4,7 @@
       "instance_file": "instances/a5-40.json"
     },
     "problem_type": "DARP",
-    "description": "The Dial‐A‐Ride Problem (DARP) requires scheduling a fleet of vehicles to pick up and deliver clients subject to time windows, loading times, maximum travel time constraints and vehicle capacity. Vehicles start and end their routes at a common depot. Each client has a pickup and a delivery request, and the objective is to minimize a lexicographic combination of route lateness (including return-to-depot lateness), client travel time lateness, and total travel distance (scaled appropriately).",
+    "description": "The DialARide Problem (DARP) requires scheduling a fleet of vehicles to pick up and deliver clients subject to time windows, loading times, maximum travel time constraints and vehicle capacity. Vehicles start and end their routes at a common depot. Each client has a pickup and a delivery request, and the objective is to minimize a lexicographic combination of route lateness (including return-to-depot lateness), client travel time lateness, and total travel distance (scaled appropriately).",
     "keywords": [
       "DARP",
       "dial-a-ride",

@@ -7,6 +7,12 @@ from qubots.base_problem import BaseProblem
 
 # Helper functions to read the instance from a JSON file
 def read_data(filename):
+
+    # Resolve relative path with respect to this module’s directory.
+    if not os.path.isabs(filename):
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        filename = os.path.join(base_dir, filename)
+    
     with open(filename) as f:
         return json.load(f)
 
