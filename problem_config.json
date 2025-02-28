@@ -3,14 +3,18 @@
     "default_params": {
       "instance_file": "instances/a5-40.json"
     },
-    "problem_type": "DARP",
+    "creator": "Rastion",
+    "type": "problem",
+    "problem_name": "Dial-A-Ride problem",
     "description": "The DialARide Problem (DARP) requires scheduling a fleet of vehicles to pick up and deliver clients subject to time windows, loading times, maximum travel time constraints and vehicle capacity. Vehicles start and end their routes at a common depot. Each client has a pickup and a delivery request, and the objective is to minimize a lexicographic combination of route lateness (including return-to-depot lateness), client travel time lateness, and total travel distance (scaled appropriately).",
+    "link_to_dataset": "https://github.com/Rastion/dial_a_ride_problem/blob/main/instances/a5-40.json",
     "keywords": [
       "DARP",
       "dial-a-ride",
       "vehicle routing",
       "time windows",
-      "pickup and delivery"
+      "pickup and delivery",
+      "route-optimization"
     ],
     "data_format": {
       "instance_file": {
@@ -29,11 +33,8 @@
       "description": "For each vehicle route, departure times are computed as the maximum between the node's earliest start and the sum of the previous departure time plus travel time, plus the loading time at that node. The route lateness is the sum over nodes of the excess over the allowed end time, and home lateness is any delay when returning to the depot. In addition, for each client the travel time (from pickup to delivery, with delivery loading time subtracted) exceeding the client’s maximum travel time is penalized. The overall objective is a weighted sum that prioritizes minimizing the number of vehicles used, then total route lateness (including client lateness), and finally the total distance traveled."
     },
     "solution_representation": "A dictionary with a key 'routes' mapping to a list (length equal to the number of vehicles) of routes (each route is a list of service node indices).",
-    "compatible_optimizers": [
-      "genetic_algorithm",
-      "simulated_annealing",
-      "particle_swarm",
-      "tabu_search"
+    "formulations": [
+      ""
     ],
     "notes": "The instance file is in JSON format (e.g., a5-40.json). The model expects that service nodes are indexed from 0 to 2×nbClients–1, with the first nbClients representing pickups and the next nbClients representing deliveries. The depot is treated externally, with its travel times to nodes provided in the distance_warehouse and time_warehouse arrays."
   }
